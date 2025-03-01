@@ -1,0 +1,415 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "name": "TB Detection Rate (Treatment Coverage) (DT_RT)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 55.17
+        },
+        {
+          "name": "2016",
+          "size": 60.3
+        },
+        {
+          "name": "2017",
+          "size": 60.37
+        },
+        {
+          "name": "2018",
+          "size": 59.98
+        },
+        {
+          "name": "2019",
+          "size": 54
+        },
+        {
+          "name": "2020",
+          "size": 44.83
+        },
+        {
+          "name": "2021",
+          "size": 51.87
+        },
+        {
+          "name": "2022",
+          "size": 62.53
+        },
+        {
+          "name": "2023",
+          "size": 69.35
+        }
+      ]
+    },
+    {
+      "name": "Childhood TB Notifications (PEDS_NOTIF)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 34370
+        },
+        {
+          "name": "2016",
+          "size": 41758
+        },
+        {
+          "name": "2017",
+          "size": 44373
+        },
+        {
+          "name": "2018",
+          "size": 47804
+        },
+        {
+          "name": "2019",
+          "size": 45447
+        },
+        {
+          "name": "2020",
+          "size": 37051
+        },
+        {
+          "name": "2021",
+          "size": 44871
+        },
+        {
+          "name": "2022",
+          "size": 58858
+        },
+        {
+          "name": "2023",
+          "size": 67140
+        }
+      ]
+    },
+    {
+      "name": "RR/MDR-TB Notifications (MDR_NOTIF)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 3059
+        },
+        {
+          "name": "2016",
+          "size": 3331
+        },
+        {
+          "name": "2017",
+          "size": 3475
+        },
+        {
+          "name": "2018",
+          "size": 3824
+        },
+        {
+          "name": "2019",
+          "size": 3820
+        },
+        {
+          "name": "2020",
+          "size": 1858
+        },
+        {
+          "name": "2021",
+          "size": 2300
+        },
+        {
+          "name": "2022",
+          "size": 3440
+        },
+        {
+          "name": "2023",
+          "size": 3619
+        }
+      ]
+    },
+    {
+      "name": "Private Sector TB Notifications (PR_NOTIF)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 72144
+        },
+        {
+          "name": "2016",
+          "size": 97493
+        },
+        {
+          "name": "2017",
+          "size": 108370
+        },
+        {
+          "name": "2018",
+          "size": 116010
+        },
+        {
+          "name": "2019",
+          "size": 117919
+        },
+        {
+          "name": "2020",
+          "size": 113785
+        },
+        {
+          "name": "2021",
+          "size": 137603
+        },
+        {
+          "name": "2022",
+          "size": 176151
+        },
+        {
+          "name": "2023",
+          "size": 209752
+        }
+      ]
+    },
+    {
+      "name": "Percent Bacteriologically Confirmed (BAC_CON)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 50.79
+        },
+        {
+          "name": "2016",
+          "size": 48.31
+        },
+        {
+          "name": "2017",
+          "size": 48.14
+        },
+        {
+          "name": "2018",
+          "size": 47.93
+        },
+        {
+          "name": "2019",
+          "size": 49.73
+        },
+        {
+          "name": "2020",
+          "size": 49.37
+        },
+        {
+          "name": "2021",
+          "size": 51.75
+        },
+        {
+          "name": "2022",
+          "size": 50.95
+        },
+        {
+          "name": "2023",
+          "size": 50.44
+        }
+      ]
+    },
+    {
+      "name": "Percent of Contacts Screened for TB (CON_SCRN)",
+      "children": [
+        {
+          "name": "2015",
+          "size": null
+        },
+        {
+          "name": "2016",
+          "size": null
+        },
+        {
+          "name": "2017",
+          "size": null
+        },
+        {
+          "name": "2018",
+          "size": null
+        },
+        {
+          "name": "2019",
+          "size": null
+        },
+        {
+          "name": "2020",
+          "size": 29.44
+        },
+        {
+          "name": "2021",
+          "size": 36.26
+        },
+        {
+          "name": "2022",
+          "size": 48.24
+        },
+        {
+          "name": "2023",
+          "size": 75.44
+        }
+      ]
+    },
+    {
+      "name": "DS-TB Treatment Success Rate (DS_TSR)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 93.34
+        },
+        {
+          "name": "2016",
+          "size": 93.73
+        },
+        {
+          "name": "2017",
+          "size": 92.57
+        },
+        {
+          "name": "2018",
+          "size": 92.84
+        },
+        {
+          "name": "2019",
+          "size": 92.88
+        },
+        {
+          "name": "2020",
+          "size": 93.57
+        },
+        {
+          "name": "2021",
+          "size": 93.53
+        },
+        {
+          "name": "2022",
+          "size": 95.04
+        },
+        {
+          "name": "2023",
+          "size": null
+        }
+      ]
+    },
+    {
+      "name": "DR-TB Treatment Success Rate (DR_TSR)",
+      "children": [
+        {
+          "name": "2015",
+          "size": 63.03
+        },
+        {
+          "name": "2016",
+          "size": 62.79
+        },
+        {
+          "name": "2017",
+          "size": 63.08
+        },
+        {
+          "name": "2018",
+          "size": 69.88
+        },
+        {
+          "name": "2019",
+          "size": 71.75
+        },
+        {
+          "name": "2020",
+          "size": 72.95
+        },
+        {
+          "name": "2021",
+          "size": 72.8
+        },
+        {
+          "name": "2022",
+          "size": null
+        },
+        {
+          "name": "2023",
+          "size": null
+        }
+      ]
+    },
+    {
+      "name": "TPT Initiations (TPT_ENROLL)",
+      "children": [
+        {
+          "name": "2015",
+          "size": null
+        },
+        {
+          "name": "2016",
+          "size": null
+        },
+        {
+          "name": "2017",
+          "size": null
+        },
+        {
+          "name": "2018",
+          "size": 6146
+        },
+        {
+          "name": "2019",
+          "size": 5689
+        },
+        {
+          "name": "2020",
+          "size": 4317
+        },
+        {
+          "name": "2021",
+          "size": 5149
+        },
+        {
+          "name": "2022",
+          "size": 10824
+        },
+        {
+          "name": "2023",
+          "size": 33560
+        }
+      ]
+    },
+    {
+      "name": "Percent of TB Financing Received from Domestic Sources (SN_DOMESTICR)",
+      "children": [
+        {
+          "name": "2015",
+          "size": null
+        },
+        {
+          "name": "2016",
+          "size": null
+        },
+        {
+          "name": "2017",
+          "size": 4.02
+        },
+        {
+          "name": "2018",
+          "size": 5.07
+        },
+        {
+          "name": "2019",
+          "size": 4.53
+        },
+        {
+          "name": "2020",
+          "size": 7.41
+        },
+        {
+          "name": "2021",
+          "size": 8.02
+        },
+        {
+          "name": "2022",
+          "size": 34.88
+        },
+        {
+          "name": "2023",
+          "size": 23.22
+        }
+      ]
+    }
+  ]
+}

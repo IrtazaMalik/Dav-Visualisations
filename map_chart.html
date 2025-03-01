@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map with Enhanced Features</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .tooltip {
+      position: absolute;
+      background: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      pointer-events: none;
+      font-size: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    #map {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .country {
+      fill: #ccc;
+      stroke: #fff;
+    }
+    .pin {
+      stroke: #333;
+      stroke-width: 0.5px;
+    }
+    #filter-container {
+      text-align: center;
+      margin: 10px 0;
+    }
+    #filter-container label, #filter-container select, #filter-container button {
+      margin: 0 5px;
+    }
+    #legend-container {
+      margin: 10px;
+      text-align: center;
+    }
+    .legend-item {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Interactive Map with Enhanced Features</h1>
+  <div id="filter-container">
+    <label for="year-select">Select Year:</label>
+    <select id="year-select"></select>
+
+    <label for="region-select">Select Region:</label>
+    <select id="region-select">
+      <option value="">All Regions</option>
+      <option value="Africa">Africa</option>
+      <option value="Asia">Asia</option>
+      <option value="Europe">Europe</option>
+      <option value="Americas">Americas</option>
+      <option value="Oceania">Oceania</option>
+    </select>
+
+    <label for="relationship-select">Select Relationship Type:</label>
+    <select id="relationship-select">
+      <option value="">All Relationships</option>
+      <option value="close">Close Relationship</option>
+      <option value="distant">Distant Relationship</option>
+    </select>
+
+    <button id="play-button">Play</button>
+    <button id="export-button">Export as Image</button>
+  </div>
+
+  <div id="legend-container">
+    <div><strong>Legend:</strong></div>
+    <div id="relationship-legend">
+      <div class="legend-item" style="background-color: green;" data-relationship="close"></div> Close
+      <div class="legend-item" style="background-color: red;" data-relationship="distant"></div> Distant
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <div class="tooltip" id="tooltip" style="opacity: 0;"></div>
+
+  <script>
+    const width = window.innerWidth * 0.8;
+    const height = window.innerHeight * 0.6;
+
+    const svg = d3.select("#map")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    const projection = d3.geoMercator()
+      .scale(width / 5)
+      .translate([width / 2, height / 1.5]);
+
+    const path = d3.geoPath().projection(projection);
+
+    const tooltip = d3.select("#tooltip");
+    const yearSelect = d3.select("#year-select");
+    const regionSelect = d3.select("#region-select");
+    const relationshipSelect = d3.select("#relationship-select");
+    const playButton = d3.select("#play-button");
+    const exportButton = d3.select("#export-button");
+
+    let allData = [];
+    let updatedGraphData = [];
+    let allRegions = [];
+    let isPlaying = false;
+    let interval;
+
+    // Create a zoom behavior
+    const zoom = d3.zoom()
+      .scaleExtent([1, 8]) // Zoom range (1x to 8x)
+      .translateExtent([[0, 0], [width, height]]) // Restrict panning
+      .on("zoom", zoomed);
+
+    // Apply the zoom behavior to the svg container
+    svg.call(zoom);
+
+    // Zoom event handler
+    function zoomed(event) {
+      svg.selectAll("g")
+        .attr("transform", event.transform); // Apply the zoom transformation
+    }
+
+    // Load data files
+    Promise.all([
+      d3.json("world-110m.json"), // TopoJSON for the world map
+      d3.csv("cleaned_tb_data_with_lat_lon.csv"), // CSV for geographic data
+      d3.json("updated_graph_data.json") // JSON for relationship data
+    ]).then(([world, data, graphData]) => {
+      allData = data;
+      updatedGraphData = graphData;
+
+      // Populate region filter dynamically from data
+      allRegions = [...new Set(data.map(d => d.Region))];
+      regionSelect.selectAll("option")
+        .data(allRegions)
+        .enter()
+        .append("option")
+        .attr("value", d => d)
+        .text(d => d);
+
+      const countries = topojson.feature(world, world.objects.countries).features;
+
+      // Draw countries
+      svg.append("g")
+        .selectAll("path")
+        .data(countries)
+        .enter()
+        .append("path")
+        .attr("d", path)
+        .attr("class", "country")
+        .attr("fill", "#e0e0e0");
+
+      // Populate year dropdown
+      const years = [...new Set(data.map(d => d.Year))];
+      yearSelect.selectAll("option")
+        .data(years)
+        .enter()
+        .append("option")
+        .attr("value", d => d)
+        .text(d => d);
+
+      // Initial map rendering
+      updateMap(years[0]);
+
+      // Event listener for year selection
+      yearSelect.on("change", () => updateMap(yearSelect.node().value));
+
+      // Event listener for region selection
+      regionSelect.on("change", () => updateMap(yearSelect.node().value));
+
+      // Event listener for relationship selection
+      relationshipSelect.on("change", () => updateMap(yearSelect.node().value));
+
+      // Play button functionality
+      playButton.on("click", () => {
+        if (isPlaying) {
+          clearInterval(interval);
+          playButton.text("Play");
+        } else {
+          let index = years.indexOf(yearSelect.node().value);
+          interval = setInterval(() => {
+            if (index >= years.length - 1) {
+              clearInterval(interval);
+              playButton.text("Play");
+              isPlaying = false;
+              return;
+            }
+            index++;
+            yearSelect.node().value = years[index];
+            updateMap(years[index]);
+          }, 1000);
+          playButton.text("Pause");
+        }
+        isPlaying = !isPlaying;
+      });
+
+      // Export map as image
+      exportButton.on("click", () => {
+        const svgElement = document.querySelector("svg");
+        const serializer = new XMLSerializer();
+        const source = serializer.serializeToString(svgElement);
+
+        const a = document.createElement("a");
+        a.href = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(source);
+        a.download = "map_chart.svg";
+        a.click();
+      });
+    }).catch(error => console.error(error));
+
+    // Function to update the map
+    function updateMap(year) {
+      const selectedRegion = regionSelect.node().value;
+      const selectedRelationship = relationshipSelect.node().value;
+
+      let filteredData = allData.filter(d => d.Year === year);
+
+      // Apply region filter
+      if (selectedRegion) {
+        filteredData = filteredData.filter(d => d.Region === selectedRegion);
+      }
+
+      svg.selectAll(".pin").remove();
+
+      svg.append("g")
+        .selectAll("circle")
+        .data(filteredData)
+        .enter()
+        .append("circle")
+        .attr("class", "pin")
+        .attr("cx", d => projection([+d.Longitude, +d.Latitude])[0])
+        .attr("cy", d => projection([+d.Longitude, +d.Latitude])[1])
+        .attr("r", 5)
+        .attr("fill", "green")
+        .on("mouseover", (event, d) => {
+          tooltip.transition().style("opacity", 1);
+          tooltip.html(`
+            <strong>${d.Entity}</strong><br>
+            Year: ${d.Year}<br>
+            TB Incidence: ${d["Estimated incidence of all forms of tuberculosis"]}<br>
+            Region: ${d.Region}
+          `)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", () => tooltip.transition().style("opacity", 0))
+        .on("click", d => highlightRelatedEntities(d.Entity, selectedRelationship));
+    }
+
+    // Highlight related entities based on relationship type
+    function highlightRelatedEntities(entity, relationshipType) {
+      const relatedEntities = updatedGraphData.links
+        .filter(link => (link.source === entity || link.target === entity) &&
+                        (!relationshipType || link.type === relationshipType))
+        .map(link => (link.source === entity ? link.target : link.source));
+
+      svg.selectAll(".pin")
+        .attr("opacity", 0.2);
+
+      svg.selectAll(".pin")
+        .filter(d => relatedEntities.includes(d.Entity))
+        .attr("opacity", 1)
+        .attr("stroke", "blue")
+        .attr("stroke-width", 2);
+    }
+  </script>
+</body>
+</html>

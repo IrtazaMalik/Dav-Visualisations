@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Force-Directed Graph</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        svg {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        .node {
+            stroke: #fff;
+            stroke-width: 1.5px;
+            cursor: pointer;
+        }
+        .link {
+            fill: none;
+            stroke: #aaa;
+            stroke-width: 1px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 8px;
+            background: lightgray;
+            border-radius: 5px;
+            opacity: 0;
+            pointer-events: none;
+            font-size: 12px;
+        }
+        .filter, #breadcrumb, #legend {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+        #breadcrumb {
+            top: 70px;
+        }
+        #legend {
+            top: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div class="filter">
+        <label for="relationshipType">Filter by Relationship Type:</label>
+        <select id="relationshipType">
+            <option value="all">All</option>
+            <option value="collaboration">Collaboration</option>
+            <option value="conflict">Conflict</option>
+        </select>
+        <br>
+        <label for="nodeType">Filter by Node Type:</label>
+        <select id="nodeType">
+            <option value="all">All</option>
+            <option value="type1">Type 1</option>
+            <option value="type2">Type 2</option>
+        </select>
+        <br>
+        <button id="downloadButton">Download as Image</button>
+    </div>
+    <div id="breadcrumb">Breadcrumb: Root</div>
+    <div id="legend">Legend:</div>
+    <svg></svg>
+    <div class="tooltip"></div>
+
+    <script>
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        const svg = d3.select("svg")
+            .attr("viewBox", `0 0 ${width} ${height}`)
+            .attr("preserveAspectRatio", "xMidYMid meet");
+
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        const simulation = d3.forceSimulation()
+            .force("link", d3.forceLink().id(d => d.id).distance(50))
+            .force("charge", d3.forceManyBody().strength(-100))
+            .force("center", d3.forceCenter(width / 2, height / 2))
+            .force("x", d3.forceX(width / 2).strength(0.1))
+            .force("y", d3.forceY(height / 2).strength(0.1));
+
+        const tooltip = d3.select(".tooltip");
+
+        d3.json("updated_graph_data.json").then(function(graph) {
+            const g = svg.append("g");
+
+            const linkGroup = g.append("g")
+                .attr("class", "links")
+                .selectAll(".link")
+                .data(graph.links)
+                .enter().append("line")
+                .attr("class", "link");
+
+            const nodeGroup = g.append("g")
+                .attr("class", "nodes")
+                .selectAll(".node")
+                .data(graph.nodes)
+                .enter().append("circle")
+                .attr("class", "node")
+                .attr("r", 10)
+                .attr("fill", d => color(d.id))
+                .call(d3.drag()
+                    .on("start", dragstarted)
+                    .on("drag", dragged)
+                    .on("end", dragended));
+
+            nodeGroup.append("title").text(d => d.id);
+
+            nodeGroup.on("mouseover", function(event, d) {
+                tooltip.transition().duration(200).style("opacity", 1);
+                const relatedLinks = graph.links.filter(l => l.source.id === d.id || l.target.id === d.id);
+                const relationships = relatedLinks.map(l => l.value).join(", ");
+                tooltip.html(`Entity: ${d.id}<br>Relationships: ${relationships}`)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            }).on("mouseout", function() {
+                tooltip.transition().duration(200).style("opacity", 0);
+            });
+
+            nodeGroup.on("click", function(event, d) {
+                d3.select("#breadcrumb").text(`Breadcrumb: ${d.id}`);
+                linkGroup.style("stroke", l => (l.source.id === d.id || l.target.id === d.id) ? "red" : "#aaa");
+                nodeGroup.style("fill", n => (n.id === d.id) ? "orange" : color(n.id));
+            });
+
+            simulation.nodes(graph.nodes).on("tick", ticked);
+            simulation.force("link").links(graph.links);
+
+            function ticked() {
+                linkGroup
+                    .attr("x1", d => Math.max(10, Math.min(width - 10, d.source.x)))
+                    .attr("y1", d => Math.max(10, Math.min(height - 10, d.source.y)))
+                    .attr("x2", d => Math.max(10, Math.min(width - 10, d.target.x)))
+                    .attr("y2", d => Math.max(10, Math.min(height - 10, d.target.y)));
+
+                nodeGroup
+                    .attr("cx", d => Math.max(10, Math.min(width - 10, d.x)))
+                    .attr("cy", d => Math.max(10, Math.min(height - 10, d.y)));
+            }
+
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+
+            svg.call(d3.zoom()
+                .scaleExtent([1, 8])
+                .on("zoom", function(event) {
+                    g.attr("transform", event.transform);
+                }));
+
+            d3.select("#relationshipType, #nodeType").on("change", function() {
+                const selectedRelationship = d3.select("#relationshipType").property("value");
+                const selectedNodeType = d3.select("#nodeType").property("value");
+
+                linkGroup.style("display", l => (selectedRelationship === "all" || l.value === selectedRelationship) ? "inline" : "none");
+                nodeGroup.style("display", n => (selectedNodeType === "all" || n.type === selectedNodeType) ? "inline" : "none");
+            });
+
+            document.getElementById("downloadButton").addEventListener("click", function() {
+                html2canvas(svg.node()).then(function(canvas) {
+                    const link = document.createElement('a');
+                    link.download = 'graph.png';
+                    link.href = canvas.toDataURL();
+                    link.click();
+                });
+            });
+
+            function updateLegend() {
+                const legend = d3.select("#legend");
+                const types = d3.map(graph.nodes, d => d.type).keys();
+
+                legend.selectAll("div")
+                    .data(types)
+                    .enter().append("div")
+                    .style("background-color", type => color(type))
+                    .text(type => type)
+                    .on("click", function(event, type) {
+                        nodeGroup.style("fill", n => (n.type === type) ? "orange" : color(n.id));
+                    });
+            }
+
+            updateLegend();
+        });
+
+        window.addEventListener("resize", function() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            svg.attr("width", width).attr("height", height);
+            simulation.force("center", d3.forceCenter(width / 2, height / 2));
+            simulation.alpha(1).restart();
+        });
+    </script>
+</body>
+</html>

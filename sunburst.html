@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Sunburst Chart</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #controls {
+      margin-bottom: 10px;
+    }
+    .tooltip {
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    #legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .legend-item {
+      margin: 5px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: #f9f9f9;
+    }
+    .legend-item.active {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enhanced Sunburst Chart for TB Data</h1>
+  <div id="controls">
+    <button id="resetZoom">Reset Zoom</button>
+    <button id="exportImage">Export as Image</button>
+  </div>
+  <div id="chart"></div>
+  <div class="tooltip" id="tooltip"></div>
+  <div id="legend"></div>
+
+  <script>
+    d3.json('sunburst.json').then(data => {
+      const width = 800, radius = width / 2;
+
+      const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+      const arc = d3.arc()
+        .startAngle(d => d.x0)
+        .endAngle(d => d.x1)
+        .innerRadius(d => d.y0)
+        .outerRadius(d => d.y1);
+
+      const partition = d3.partition()
+        .size([2 * Math.PI, radius]);
+
+      const root = d3.hierarchy(data)
+        .sum(d => d.size || 0)
+        .sort((a, b) => b.value - a.value);
+
+      partition(root);
+
+      const svg = d3.select("#chart").append("svg")
+        .attr("width", width)
+        .attr("height", width)
+        .append("g")
+        .attr("transform", `translate(${radius}, ${radius})`);
+
+      const tooltip = d3.select("#tooltip");
+
+      const paths = svg.selectAll("path")
+        .data(root.descendants())
+        .join("path")
+        .attr("d", arc)
+        .style("fill", d => color(d.depth))
+        .style("stroke", "#fff")
+        .on("mouseover", (event, d) => {
+          tooltip.style("opacity", 1)
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY + 10}px`)
+            .html(`<strong>${d.data.name}</strong><br>Value: ${d.value || "N/A"}`);
+        })
+        .on("mouseout", () => tooltip.style("opacity", 0))
+        .on("click", (event, d) => zoomToNode(d));
+
+      function zoomToNode(node) {
+        const xScale = d3.scaleLinear()
+          .domain([node.x0, node.x1])
+          .range([0, 2 * Math.PI]);
+
+        const yScale = d3.scaleLinear()
+          .domain([node.y0, 1])
+          .range([0, radius]);
+
+        paths.transition()
+          .duration(750)
+          .attrTween("d", d => {
+            const interpolatorX = d3.interpolate(d.x0, d.x1);
+            const interpolatorY = d3.interpolate(d.y0, d.y1);
+
+            return t => {
+              d.x0 = interpolatorX(t);
+              d.y0 = interpolatorY(t);
+              return arc(d);
+            };
+          });
+      }
+
+      d3.select("#resetZoom").on("click", () => zoomToNode(root));
+
+      // Export the chart as an image
+      d3.select("#exportImage").on("click", () => {
+        const serializer = new XMLSerializer();
+        const source = serializer.serializeToString(svg.node());
+        const url = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(source)}`;
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "sunburst_chart.svg";
+        link.click();
+      });
+
+      // Create a legend
+      const legend = d3.select("#legend");
+      root.children.forEach((d, i) => {
+        const item = legend.append("div")
+          .attr("class", "legend-item active")
+          .style("background-color", color(i))
+          .text(d.data.name)
+          .on("click", () => {
+            const active = item.classed("active");
+            item.classed("active", !active);
+            paths.filter(p => p.data.name === d.data.name)
+              .transition()
+              .style("opacity", active ? 0.2 : 1);
+          });
+      });
+    });
+  </script>
+</body>
+</html>

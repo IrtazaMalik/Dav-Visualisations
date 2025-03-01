@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dav Project</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif; /* Changed to Roboto font */
+            background-color: #1c1c1c;
+            color: #E0E0E0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Moving Image Background */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/022/590/726/non_2x/vector-abstract-3d-big-data-visualization-futuristic-infographics-aesthetic-design-intricate-data-threads-plot-social-network-or-business-analytics-representation-generative-ai-photo.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            animation: moveBg 60s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBg {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Roboto', sans-serif; /* Changed to Roboto font */
+        }
+
+        /* Aesthetic and moving text style */
+        header h1 {
+            margin: 0;
+            font-size: 50px;
+            font-family: 'Pacifico', cursive; /* Kept Pacifico for header text */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #f7f7f7;
+            animation: moveText 5s ease-in-out infinite;
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(-50%);
+                opacity: 0.3; /* Increased transparency */
+            }
+            50% {
+                transform: translateX(0);
+                opacity: 0.7; /* Less transparency */
+            }
+            100% {
+                transform: translateX(50%);
+                opacity: 0.3; /* Increased transparency */
+            }
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        section a {
+            text-decoration: none;
+        }
+
+        /* Style for the images and hover effect */
+        section img {
+            width: 440px; /* Increased image size */
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
+        }
+
+        section p {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 600px;
+            color: #D6D6D6;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #B0B0B0;
+            text-align: center;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #FFFFFF;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        /* Button Style */
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: transparent; /* Transparent background */
+            color: transparent; /* Transparent text */
+            font-size: 20px;
+            font-weight: bold;
+            border: 5px solid transparent; /* Transparent border */
+            text-decoration: none;
+            transition: transform 0.1s, box-shadow 0.1s, background-color 0.3s, border 0.3s;
+            cursor: pointer;
+            box-shadow: none; /* No shadow */
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            border: 5px solid rgba(255, 255, 255, 0.5); /* A subtle border color on hover */
+            box-shadow: none; /* No shadow on hover */
+        }
+
+        .button:active {
+            transform: scale(0.95);
+            border: 5px solid rgba(255, 255, 255, 0.8); /* Slightly stronger border when active */
+            box-shadow: none; /* No shadow when active */
+        }
+
+        /* Heading Style */
+        .heading {
+            font-size: 36px;
+            color: #FFFFFF;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Description Style */
+        .description {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #D6D6D6;
+            font-family: 'Verdana', sans-serif;
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .description:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.google.com/specimen/Jaro" rel="stylesheet">
+</head>
+<body>
+    <!-- Moving Background Image -->
+    <div class="bg-image"></div>
+
+    <header>
+        <h1>DAV PROJECT</h1>
+    </header>
+
+    <!-- Section 1: Force-Directed Graph -->
+    <section id="section1">
+        <a href="force_directed_graph.html" class="button">
+            <img src="force_directed.png" alt="Page 1">
+        </a>
+
+        <!-- Heading and Description for Page 1 -->
+        <h2 class="heading">Force-Directed Graph</h2>
+        <p class="description">
+            Force-directed graphs are a powerful way to visualize relationships between data points. These graphs use physics-based algorithms to create an attractive and readable layout, helping you better understand the connections and patterns within the data.
+        </p>
+    </section>
+
+    <!-- Section 2: Map Chart -->
+    <section id="section2">
+        <a href="map_chart.html" class="button">
+            <img src="map_chart.webp" alt="Page 2">
+        </a>
+
+        <!-- Heading and Description for Page 2 -->
+        <h2 class="heading">Map Chart</h2>
+        <p class="description">
+            Map charts allow you to visualize geographical data in a clear and engaging way. By plotting data points over geographical regions, map charts provide insight into patterns and trends in location-based data, enhancing spatial analysis.
+        </p>
+    </section>
+
+    <!-- Section 3: Timeline Visualization -->
+    <section id="section3">
+        <a href="timeline_graph.html" class="button">
+            <img src="timeline.avif" alt="Page 3">
+        </a>
+
+        <!-- Heading and Description for Page 3 -->
+        <h2 class="heading">Timeline Visualization</h2>
+        <p class="description">
+            Timeline visualizations are perfect for displaying events over time. This interactive method helps users track progress, analyze trends, and compare historical events in a linear format, providing a dynamic experience.
+        </p>
+    </section>
+
+    <!-- Section 4: Hierarchical Tree Map -->
+    <section id="section4">
+        <a href="tree_map.html" class="button">
+            <img src="tree_map.jpg" alt="Page 4">
+        </a>
+
+        <!-- Heading and Description for Page 4 -->
+        <h2 class="heading">Hierarchical Tree Map</h2>
+        <p class="description">
+            Tree maps display hierarchical data as a set of nested rectangles. They allow you to see patterns and relationships within a dataset, making it easier to identify proportions and outliers within large datasets.
+        </p>
+    </section>
+
+    <!-- Section 5: SunBurst Visualization -->
+    <section id="section5">
+        <a href="sunburst.html" class="button">
+            <img src="sunburst.avif" alt="Page 5">
+        </a>
+
+        <!-- Heading and Description for Page 5 -->
+        <h2 class="heading">SunBurst Visualization</h2>
+        <p class="description">
+            The sunburst chart is a circular representation of hierarchical data. It allows you to visualize levels of a tree structure in a compact and intuitive way, making it easy to track progress and relationships within complex datasets.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Project by: Irtaza Malik + Nabeeha Bhatti + Hureeda Javeed</p>
+    </footer>
+</body>
+</html>

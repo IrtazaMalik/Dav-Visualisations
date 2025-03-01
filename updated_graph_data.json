@@ -1,0 +1,3965 @@
+{
+    "nodes": [
+        {
+            "id": "Afghanistan"
+        },
+        {
+            "id": "Albania"
+        },
+        {
+            "id": "Algeria"
+        },
+        {
+            "id": "American Samoa"
+        },
+        {
+            "id": "Andorra"
+        },
+        {
+            "id": "Angola"
+        },
+        {
+            "id": "Antigua and Barbuda"
+        },
+        {
+            "id": "Argentina"
+        },
+        {
+            "id": "Armenia"
+        },
+        {
+            "id": "Australia"
+        },
+        {
+            "id": "Austria"
+        },
+        {
+            "id": "Azerbaijan"
+        },
+        {
+            "id": "Bahamas"
+        },
+        {
+            "id": "Bahrain"
+        },
+        {
+            "id": "Bangladesh"
+        },
+        {
+            "id": "Barbados"
+        },
+        {
+            "id": "Belarus"
+        },
+        {
+            "id": "Belgium"
+        },
+        {
+            "id": "Belize"
+        },
+        {
+            "id": "Benin"
+        },
+        {
+            "id": "Bermuda"
+        },
+        {
+            "id": "Bhutan"
+        },
+        {
+            "id": "Bolivia"
+        },
+        {
+            "id": "Bosnia and Herzegovina"
+        },
+        {
+            "id": "Botswana"
+        },
+        {
+            "id": "Brazil"
+        },
+        {
+            "id": "Brunei"
+        },
+        {
+            "id": "Bulgaria"
+        },
+        {
+            "id": "Burkina Faso"
+        },
+        {
+            "id": "Burundi"
+        },
+        {
+            "id": "Cambodia"
+        },
+        {
+            "id": "Cameroon"
+        },
+        {
+            "id": "Canada"
+        },
+        {
+            "id": "Cape Verde"
+        },
+        {
+            "id": "Central African Republic"
+        },
+        {
+            "id": "Chad"
+        },
+        {
+            "id": "Chile"
+        },
+        {
+            "id": "China"
+        },
+        {
+            "id": "Colombia"
+        },
+        {
+            "id": "Comoros"
+        },
+        {
+            "id": "Congo"
+        },
+        {
+            "id": "Cook Islands"
+        },
+        {
+            "id": "Costa Rica"
+        },
+        {
+            "id": "Cote d'Ivoire"
+        },
+        {
+            "id": "Croatia"
+        },
+        {
+            "id": "Cuba"
+        },
+        {
+            "id": "Cyprus"
+        },
+        {
+            "id": "Czechia"
+        },
+        {
+            "id": "Democratic Republic of Congo"
+        },
+        {
+            "id": "Denmark"
+        },
+        {
+            "id": "Djibouti"
+        },
+        {
+            "id": "Dominica"
+        },
+        {
+            "id": "Dominican Republic"
+        },
+        {
+            "id": "East Timor"
+        },
+        {
+            "id": "Ecuador"
+        },
+        {
+            "id": "Egypt"
+        },
+        {
+            "id": "El Salvador"
+        },
+        {
+            "id": "Equatorial Guinea"
+        },
+        {
+            "id": "Eritrea"
+        },
+        {
+            "id": "Estonia"
+        },
+        {
+            "id": "Eswatini"
+        },
+        {
+            "id": "Ethiopia"
+        },
+        {
+            "id": "Fiji"
+        },
+        {
+            "id": "Finland"
+        },
+        {
+            "id": "France"
+        },
+        {
+            "id": "Gabon"
+        },
+        {
+            "id": "Gambia"
+        },
+        {
+            "id": "Georgia"
+        },
+        {
+            "id": "Germany"
+        },
+        {
+            "id": "Ghana"
+        },
+        {
+            "id": "Greece"
+        },
+        {
+            "id": "Greenland"
+        },
+        {
+            "id": "Grenada"
+        },
+        {
+            "id": "Guam"
+        },
+        {
+            "id": "Guatemala"
+        },
+        {
+            "id": "Guinea"
+        },
+        {
+            "id": "Guinea-Bissau"
+        },
+        {
+            "id": "Guyana"
+        },
+        {
+            "id": "Haiti"
+        },
+        {
+            "id": "Honduras"
+        },
+        {
+            "id": "Hungary"
+        },
+        {
+            "id": "Iceland"
+        },
+        {
+            "id": "India"
+        },
+        {
+            "id": "Indonesia"
+        },
+        {
+            "id": "Iran"
+        },
+        {
+            "id": "Iraq"
+        },
+        {
+            "id": "Ireland"
+        },
+        {
+            "id": "Israel"
+        },
+        {
+            "id": "Italy"
+        },
+        {
+            "id": "Jamaica"
+        },
+        {
+            "id": "Japan"
+        },
+        {
+            "id": "Jordan"
+        },
+        {
+            "id": "Kazakhstan"
+        },
+        {
+            "id": "Kenya"
+        },
+        {
+            "id": "Kiribati"
+        },
+        {
+            "id": "Kuwait"
+        },
+        {
+            "id": "Kyrgyzstan"
+        },
+        {
+            "id": "Laos"
+        },
+        {
+            "id": "Latvia"
+        },
+        {
+            "id": "Lebanon"
+        },
+        {
+            "id": "Lesotho"
+        },
+        {
+            "id": "Liberia"
+        },
+        {
+            "id": "Libya"
+        },
+        {
+            "id": "Lithuania"
+        },
+        {
+            "id": "Luxembourg"
+        },
+        {
+            "id": "Madagascar"
+        },
+        {
+            "id": "Malawi"
+        },
+        {
+            "id": "Malaysia"
+        },
+        {
+            "id": "Maldives"
+        },
+        {
+            "id": "Mali"
+        },
+        {
+            "id": "Malta"
+        },
+        {
+            "id": "Marshall Islands"
+        },
+        {
+            "id": "Mauritania"
+        },
+        {
+            "id": "Mauritius"
+        },
+        {
+            "id": "Mexico"
+        },
+        {
+            "id": "Micronesia (country)"
+        },
+        {
+            "id": "Moldova"
+        },
+        {
+            "id": "Monaco"
+        },
+        {
+            "id": "Mongolia"
+        },
+        {
+            "id": "Montenegro"
+        },
+        {
+            "id": "Morocco"
+        },
+        {
+            "id": "Mozambique"
+        },
+        {
+            "id": "Myanmar"
+        },
+        {
+            "id": "Namibia"
+        },
+        {
+            "id": "Nauru"
+        },
+        {
+            "id": "Nepal"
+        },
+        {
+            "id": "Netherlands"
+        },
+        {
+            "id": "New Zealand"
+        },
+        {
+            "id": "Nicaragua"
+        },
+        {
+            "id": "Niger"
+        },
+        {
+            "id": "Nigeria"
+        },
+        {
+            "id": "Niue"
+        },
+        {
+            "id": "North Korea"
+        },
+        {
+            "id": "North Macedonia"
+        },
+        {
+            "id": "Northern Mariana Islands"
+        },
+        {
+            "id": "Norway"
+        },
+        {
+            "id": "Oman"
+        },
+        {
+            "id": "Pakistan"
+        },
+        {
+            "id": "Palau"
+        },
+        {
+            "id": "Palestine"
+        },
+        {
+            "id": "Panama"
+        },
+        {
+            "id": "Papua New Guinea"
+        },
+        {
+            "id": "Paraguay"
+        },
+        {
+            "id": "Peru"
+        },
+        {
+            "id": "Philippines"
+        },
+        {
+            "id": "Poland"
+        },
+        {
+            "id": "Portugal"
+        },
+        {
+            "id": "Puerto Rico"
+        },
+        {
+            "id": "Qatar"
+        },
+        {
+            "id": "Romania"
+        },
+        {
+            "id": "Russia"
+        },
+        {
+            "id": "Rwanda"
+        },
+        {
+            "id": "Saint Kitts and Nevis"
+        },
+        {
+            "id": "Saint Lucia"
+        },
+        {
+            "id": "Saint Vincent and the Grenadines"
+        },
+        {
+            "id": "Samoa"
+        },
+        {
+            "id": "San Marino"
+        },
+        {
+            "id": "Sao Tome and Principe"
+        },
+        {
+            "id": "Saudi Arabia"
+        },
+        {
+            "id": "Senegal"
+        },
+        {
+            "id": "Serbia"
+        },
+        {
+            "id": "Seychelles"
+        },
+        {
+            "id": "Sierra Leone"
+        },
+        {
+            "id": "Singapore"
+        },
+        {
+            "id": "Slovakia"
+        },
+        {
+            "id": "Slovenia"
+        },
+        {
+            "id": "Solomon Islands"
+        },
+        {
+            "id": "Somalia"
+        },
+        {
+            "id": "South Africa"
+        },
+        {
+            "id": "South Korea"
+        },
+        {
+            "id": "South Sudan"
+        },
+        {
+            "id": "Spain"
+        },
+        {
+            "id": "Sri Lanka"
+        },
+        {
+            "id": "Sudan"
+        },
+        {
+            "id": "Suriname"
+        },
+        {
+            "id": "Sweden"
+        },
+        {
+            "id": "Switzerland"
+        },
+        {
+            "id": "Syria"
+        },
+        {
+            "id": "Tajikistan"
+        },
+        {
+            "id": "Tanzania"
+        },
+        {
+            "id": "Thailand"
+        },
+        {
+            "id": "Togo"
+        },
+        {
+            "id": "Tokelau"
+        },
+        {
+            "id": "Tonga"
+        },
+        {
+            "id": "Trinidad and Tobago"
+        },
+        {
+            "id": "Tunisia"
+        },
+        {
+            "id": "Turkey"
+        },
+        {
+            "id": "Turkmenistan"
+        },
+        {
+            "id": "Tuvalu"
+        },
+        {
+            "id": "Uganda"
+        },
+        {
+            "id": "Ukraine"
+        },
+        {
+            "id": "United Arab Emirates"
+        },
+        {
+            "id": "United Kingdom"
+        },
+        {
+            "id": "United States"
+        },
+        {
+            "id": "Uruguay"
+        },
+        {
+            "id": "Uzbekistan"
+        },
+        {
+            "id": "Vanuatu"
+        },
+        {
+            "id": "Venezuela"
+        },
+        {
+            "id": "Vietnam"
+        },
+        {
+            "id": "World"
+        },
+        {
+            "id": "Yemen"
+        },
+        {
+            "id": "Zambia"
+        },
+        {
+            "id": "Zimbabwe"
+        }
+    ],
+    "links": [
+        {
+            "source": "Afghanistan",
+            "target": "Bhutan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Afghanistan",
+            "target": "Gambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Afghanistan",
+            "target": "Ghana",
+            "value": "collaboration"
+        },
+        {
+            "source": "Afghanistan",
+            "target": "Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Afghanistan",
+            "target": "Thailand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Afghanistan",
+            "target": "Tuvalu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Albania",
+            "target": "Chile",
+            "value": "collaboration"
+        },
+        {
+            "source": "Albania",
+            "target": "Egypt",
+            "value": "collaboration"
+        },
+        {
+            "source": "Albania",
+            "target": "Hungary",
+            "value": "collaboration"
+        },
+        {
+            "source": "Albania",
+            "target": "Iran",
+            "value": "collaboration"
+        },
+        {
+            "source": "Albania",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Benin",
+            "value": "conflict"
+        },
+        {
+            "source": "Algeria",
+            "target": "Cape Verde",
+            "value": "conflict"
+        },
+        {
+            "source": "Algeria",
+            "target": "China",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Malaysia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Nauru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Northern Mariana Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Algeria",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Australia",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Cook Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Denmark",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Finland",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Germany",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Italy",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Jordan",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Netherlands",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "American Samoa",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Andorra",
+            "target": "Austria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Andorra",
+            "target": "Belgium",
+            "value": "collaboration"
+        },
+        {
+            "source": "Andorra",
+            "target": "France",
+            "value": "collaboration"
+        },
+        {
+            "source": "Andorra",
+            "target": "Ireland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Andorra",
+            "target": "Malta",
+            "value": "collaboration"
+        },
+        {
+            "source": "Andorra",
+            "target": "Saint Vincent and the Grenadines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Angola",
+            "target": "Congo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Angola",
+            "target": "Guinea-Bissau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Angola",
+            "target": "Indonesia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Angola",
+            "target": "Mozambique",
+            "value": "collaboration"
+        },
+        {
+            "source": "Antigua and Barbuda",
+            "target": "Cyprus",
+            "value": "collaboration"
+        },
+        {
+            "source": "Antigua and Barbuda",
+            "target": "Jamaica",
+            "value": "collaboration"
+        },
+        {
+            "source": "Antigua and Barbuda",
+            "target": "Saint Kitts and Nevis",
+            "value": "collaboration"
+        },
+        {
+            "source": "Antigua and Barbuda",
+            "target": "United States",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "Guatemala",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "Kuwait",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "North Macedonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "Serbia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Argentina",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Belarus",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Bosnia and Herzegovina",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Burkina Faso",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Dominican Republic",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Honduras",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Latvia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Armenia",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Australia",
+            "target": "Cook Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Australia",
+            "target": "Finland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Australia",
+            "target": "Israel",
+            "value": "collaboration"
+        },
+        {
+            "source": "Australia",
+            "target": "Jordan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Australia",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Australia",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "Austria",
+            "target": "Belgium",
+            "value": "collaboration"
+        },
+        {
+            "source": "Austria",
+            "target": "France",
+            "value": "collaboration"
+        },
+        {
+            "source": "Austria",
+            "target": "Ireland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Austria",
+            "target": "Malta",
+            "value": "collaboration"
+        },
+        {
+            "source": "Austria",
+            "target": "Saint Vincent and the Grenadines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "China",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Malaysia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Northern Mariana Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Rwanda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Azerbaijan",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahamas",
+            "target": "Chile",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahamas",
+            "target": "Hungary",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahamas",
+            "target": "Iran",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahamas",
+            "target": "Spain",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahamas",
+            "target": "Tonga",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahamas",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "Niue",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "North Macedonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "Poland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "Serbia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "Syria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "Turkey",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bahrain",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Cote d'Ivoire",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Equatorial Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Haiti",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Laos",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Nigeria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "South Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bangladesh",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Brunei",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Burkina Faso",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Dominican Republic",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Latvia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Lithuania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Mali",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Sri Lanka",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belarus",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belgium",
+            "target": "France",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belgium",
+            "target": "Oman",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belgium",
+            "target": "Saint Vincent and the Grenadines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belgium",
+            "target": "Slovakia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belgium",
+            "target": "Slovenia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belize",
+            "target": "Comoros",
+            "value": "collaboration"
+        },
+        {
+            "source": "Belize",
+            "target": "Qatar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Brunei",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Cape Verde",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Lithuania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Mali",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Nauru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Sri Lanka",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Benin",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bhutan",
+            "target": "Gambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bhutan",
+            "target": "Ghana",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bhutan",
+            "target": "Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bhutan",
+            "target": "Thailand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bhutan",
+            "target": "Tuvalu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Chad",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Georgia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Kazakhstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Kyrgyzstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Mauritania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bolivia",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bosnia and Herzegovina",
+            "target": "Dominican Republic",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bosnia and Herzegovina",
+            "target": "Honduras",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bosnia and Herzegovina",
+            "target": "Latvia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bosnia and Herzegovina",
+            "target": "Nicaragua",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bosnia and Herzegovina",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Botswana",
+            "target": "Central African Republic",
+            "value": "collaboration"
+        },
+        {
+            "source": "Botswana",
+            "target": "Gabon",
+            "value": "collaboration"
+        },
+        {
+            "source": "Botswana",
+            "target": "North Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Botswana",
+            "target": "Philippines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Botswana",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brazil",
+            "target": "Ecuador",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brazil",
+            "target": "Guam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brazil",
+            "target": "Iraq",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brazil",
+            "target": "Nicaragua",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brazil",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Lithuania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Mali",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Nauru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Sri Lanka",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Brunei",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "El Salvador",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "Iraq",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "Libya",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "Maldives",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "Qatar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Bulgaria",
+            "target": "Singapore",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burkina Faso",
+            "target": "Dominican Republic",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burkina Faso",
+            "target": "Honduras",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burkina Faso",
+            "target": "Latvia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burkina Faso",
+            "target": "Mali",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burkina Faso",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burkina Faso",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burundi",
+            "target": "Eritrea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burundi",
+            "target": "Gambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burundi",
+            "target": "Ghana",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burundi",
+            "target": "Greenland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Burundi",
+            "target": "World",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Djibouti",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Kenya",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Kiribati",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Mongolia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Myanmar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Papua New Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Tanzania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cambodia",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cameroon",
+            "target": "Ethiopia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cameroon",
+            "target": "India",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cameroon",
+            "target": "Liberia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cameroon",
+            "target": "Madagascar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cameroon",
+            "target": "Pakistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cameroon",
+            "target": "Somalia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Canada",
+            "target": "Greece",
+            "value": "collaboration"
+        },
+        {
+            "source": "Canada",
+            "target": "Israel",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "China",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Malaysia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Nauru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Northern Mariana Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cape Verde",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Central African Republic",
+            "target": "East Timor",
+            "value": "collaboration"
+        },
+        {
+            "source": "Central African Republic",
+            "target": "Gabon",
+            "value": "collaboration"
+        },
+        {
+            "source": "Central African Republic",
+            "target": "North Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Central African Republic",
+            "target": "Philippines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Central African Republic",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Eritrea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Georgia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Greenland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Kazakhstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Kyrgyzstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Mauritania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chad",
+            "target": "World",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chile",
+            "target": "Egypt",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chile",
+            "target": "Hungary",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chile",
+            "target": "Iran",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chile",
+            "target": "Spain",
+            "value": "collaboration"
+        },
+        {
+            "source": "Chile",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Malaysia",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Northern Mariana Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Rwanda",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "China",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Comoros",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Estonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Fiji",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Portugal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Colombia",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Comoros",
+            "target": "Estonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Comoros",
+            "target": "Fiji",
+            "value": "collaboration"
+        },
+        {
+            "source": "Comoros",
+            "target": "Qatar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Comoros",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Congo",
+            "target": "Kiribati",
+            "value": "collaboration"
+        },
+        {
+            "source": "Congo",
+            "target": "Mongolia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Congo",
+            "target": "Tanzania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Congo",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Denmark",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Finland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Germany",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Italy",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Jordan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Netherlands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cook Islands",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Costa Rica",
+            "target": "Mauritius",
+            "value": "collaboration"
+        },
+        {
+            "source": "Costa Rica",
+            "target": "Samoa",
+            "value": "collaboration"
+        },
+        {
+            "source": "Costa Rica",
+            "target": "Saudi Arabia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Costa Rica",
+            "target": "Tokelau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Costa Rica",
+            "target": "Tonga",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "Equatorial Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "Haiti",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "Laos",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "Nigeria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "South Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cote d'Ivoire",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Croatia",
+            "target": "Japan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Croatia",
+            "target": "Mexico",
+            "value": "collaboration"
+        },
+        {
+            "source": "Croatia",
+            "target": "Montenegro",
+            "value": "collaboration"
+        },
+        {
+            "source": "Croatia",
+            "target": "Poland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Croatia",
+            "target": "Seychelles",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cuba",
+            "target": "Czechia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cuba",
+            "target": "Denmark",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cuba",
+            "target": "Luxembourg",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cuba",
+            "target": "New Zealand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cuba",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cuba",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cyprus",
+            "target": "Jamaica",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cyprus",
+            "target": "Saint Kitts and Nevis",
+            "value": "collaboration"
+        },
+        {
+            "source": "Cyprus",
+            "target": "United States",
+            "value": "collaboration"
+        },
+        {
+            "source": "Czechia",
+            "target": "Dominica",
+            "value": "collaboration"
+        },
+        {
+            "source": "Czechia",
+            "target": "Luxembourg",
+            "value": "collaboration"
+        },
+        {
+            "source": "Czechia",
+            "target": "New Zealand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Czechia",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Guinea-Bissau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Indonesia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Malawi",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Marshall Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Mozambique",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Nepal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Democratic Republic of Congo",
+            "target": "Sierra Leone",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Finland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Germany",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Italy",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Luxembourg",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Netherlands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Denmark",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Djibouti",
+            "target": "Kiribati",
+            "value": "collaboration"
+        },
+        {
+            "source": "Djibouti",
+            "target": "Mongolia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Djibouti",
+            "target": "Myanmar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Djibouti",
+            "target": "Papua New Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Djibouti",
+            "target": "Tanzania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Djibouti",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominica",
+            "target": "France",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominica",
+            "target": "Ireland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominica",
+            "target": "Malta",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominica",
+            "target": "New Zealand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominican Republic",
+            "target": "Honduras",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominican Republic",
+            "target": "Latvia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominican Republic",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Dominican Republic",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "East Timor",
+            "target": "Kenya",
+            "value": "collaboration"
+        },
+        {
+            "source": "East Timor",
+            "target": "Myanmar",
+            "value": "collaboration"
+        },
+        {
+            "source": "East Timor",
+            "target": "North Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "East Timor",
+            "target": "Philippines",
+            "value": "collaboration"
+        },
+        {
+            "source": "East Timor",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ecuador",
+            "target": "El Salvador",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ecuador",
+            "target": "Guam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ecuador",
+            "target": "Iraq",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ecuador",
+            "target": "Maldives",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ecuador",
+            "target": "Nicaragua",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ecuador",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Egypt",
+            "target": "Hungary",
+            "value": "collaboration"
+        },
+        {
+            "source": "Egypt",
+            "target": "Iran",
+            "value": "collaboration"
+        },
+        {
+            "source": "Egypt",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "El Salvador",
+            "target": "Guam",
+            "value": "collaboration"
+        },
+        {
+            "source": "El Salvador",
+            "target": "Iraq",
+            "value": "collaboration"
+        },
+        {
+            "source": "El Salvador",
+            "target": "Libya",
+            "value": "collaboration"
+        },
+        {
+            "source": "El Salvador",
+            "target": "Maldives",
+            "value": "collaboration"
+        },
+        {
+            "source": "El Salvador",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "El Salvador",
+            "target": "Singapore",
+            "value": "collaboration"
+        },
+        {
+            "source": "Equatorial Guinea",
+            "target": "Haiti",
+            "value": "collaboration"
+        },
+        {
+            "source": "Equatorial Guinea",
+            "target": "Laos",
+            "value": "collaboration"
+        },
+        {
+            "source": "Equatorial Guinea",
+            "target": "Nigeria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Equatorial Guinea",
+            "target": "South Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Equatorial Guinea",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Equatorial Guinea",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eritrea",
+            "target": "Georgia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eritrea",
+            "target": "Greenland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eritrea",
+            "target": "Mauritania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eritrea",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eritrea",
+            "target": "World",
+            "value": "collaboration"
+        },
+        {
+            "source": "Estonia",
+            "target": "Fiji",
+            "value": "collaboration"
+        },
+        {
+            "source": "Estonia",
+            "target": "Portugal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Estonia",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Estonia",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Estonia",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eswatini",
+            "target": "Lesotho",
+            "value": "collaboration"
+        },
+        {
+            "source": "Eswatini",
+            "target": "South Africa",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ethiopia",
+            "target": "India",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ethiopia",
+            "target": "Liberia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ethiopia",
+            "target": "Pakistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ethiopia",
+            "target": "Somalia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Fiji",
+            "target": "Portugal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Fiji",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Fiji",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Fiji",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Germany",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Italy",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Jordan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Netherlands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "Finland",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "France",
+            "target": "Ireland",
+            "value": "collaboration"
+        },
+        {
+            "source": "France",
+            "target": "Malta",
+            "value": "collaboration"
+        },
+        {
+            "source": "Gabon",
+            "target": "North Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Gabon",
+            "target": "Philippines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Gabon",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Gambia",
+            "target": "Ghana",
+            "value": "collaboration"
+        },
+        {
+            "source": "Gambia",
+            "target": "Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Gambia",
+            "target": "Thailand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Greenland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Kazakhstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Kyrgyzstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Mauritania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Georgia",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Germany",
+            "target": "Italy",
+            "value": "collaboration"
+        },
+        {
+            "source": "Germany",
+            "target": "Netherlands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Germany",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Germany",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Germany",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ghana",
+            "target": "Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ghana",
+            "target": "Thailand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ghana",
+            "target": "Tuvalu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Greece",
+            "target": "Israel",
+            "value": "collaboration"
+        },
+        {
+            "source": "Greenland",
+            "target": "Mauritania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Greenland",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Greenland",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Greenland",
+            "target": "World",
+            "value": "collaboration"
+        },
+        {
+            "source": "Grenada",
+            "target": "Puerto Rico",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guam",
+            "target": "Iraq",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guam",
+            "target": "Maldives",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guam",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "Kuwait",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "North Macedonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "Serbia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "Syria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guatemala",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guinea",
+            "target": "Thailand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guinea",
+            "target": "Tuvalu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guinea-Bissau",
+            "target": "Indonesia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guinea-Bissau",
+            "target": "Marshall Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guinea-Bissau",
+            "target": "Mozambique",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guyana",
+            "target": "Morocco",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guyana",
+            "target": "Ukraine",
+            "value": "collaboration"
+        },
+        {
+            "source": "Guyana",
+            "target": "Uzbekistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Haiti",
+            "target": "Laos",
+            "value": "collaboration"
+        },
+        {
+            "source": "Haiti",
+            "target": "Madagascar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Haiti",
+            "target": "Nigeria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Haiti",
+            "target": "South Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Haiti",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Haiti",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Honduras",
+            "target": "Latvia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Honduras",
+            "target": "Nicaragua",
+            "value": "collaboration"
+        },
+        {
+            "source": "Honduras",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Hungary",
+            "target": "Iran",
+            "value": "collaboration"
+        },
+        {
+            "source": "Hungary",
+            "target": "Spain",
+            "value": "collaboration"
+        },
+        {
+            "source": "Hungary",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "India",
+            "target": "Liberia",
+            "value": "collaboration"
+        },
+        {
+            "source": "India",
+            "target": "Madagascar",
+            "value": "collaboration"
+        },
+        {
+            "source": "India",
+            "target": "Pakistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "India",
+            "target": "Somalia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Indonesia",
+            "target": "Marshall Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Indonesia",
+            "target": "Mozambique",
+            "value": "collaboration"
+        },
+        {
+            "source": "Indonesia",
+            "target": "Nepal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Iran",
+            "target": "Spain",
+            "value": "collaboration"
+        },
+        {
+            "source": "Iran",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "Iraq",
+            "target": "Libya",
+            "value": "collaboration"
+        },
+        {
+            "source": "Iraq",
+            "target": "Maldives",
+            "value": "collaboration"
+        },
+        {
+            "source": "Iraq",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Iraq",
+            "target": "Singapore",
+            "value": "collaboration"
+        },
+        {
+            "source": "Ireland",
+            "target": "Malta",
+            "value": "collaboration"
+        },
+        {
+            "source": "Israel",
+            "target": "Jordan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Israel",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Israel",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "Italy",
+            "target": "Luxembourg",
+            "value": "collaboration"
+        },
+        {
+            "source": "Italy",
+            "target": "Netherlands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Italy",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Italy",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Italy",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Jamaica",
+            "target": "Saint Kitts and Nevis",
+            "value": "collaboration"
+        },
+        {
+            "source": "Jamaica",
+            "target": "United States",
+            "value": "collaboration"
+        },
+        {
+            "source": "Japan",
+            "target": "Mexico",
+            "value": "collaboration"
+        },
+        {
+            "source": "Japan",
+            "target": "Montenegro",
+            "value": "collaboration"
+        },
+        {
+            "source": "Japan",
+            "target": "Poland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Japan",
+            "target": "Seychelles",
+            "value": "collaboration"
+        },
+        {
+            "source": "Jordan",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Jordan",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kazakhstan",
+            "target": "Kyrgyzstan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kazakhstan",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kazakhstan",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kazakhstan",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kazakhstan",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kenya",
+            "target": "Myanmar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kenya",
+            "target": "North Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kenya",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kiribati",
+            "target": "Mongolia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kiribati",
+            "target": "Papua New Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kiribati",
+            "target": "Tanzania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kiribati",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kuwait",
+            "target": "North Macedonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kuwait",
+            "target": "Serbia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kuwait",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kuwait",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kuwait",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kyrgyzstan",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kyrgyzstan",
+            "target": "Niger",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kyrgyzstan",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kyrgyzstan",
+            "target": "Sao Tome and Principe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kyrgyzstan",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Kyrgyzstan",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Laos",
+            "target": "Madagascar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Laos",
+            "target": "Nigeria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Laos",
+            "target": "South Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Laos",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Laos",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Latvia",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Latvia",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lebanon",
+            "target": "Mauritius",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lebanon",
+            "target": "Oman",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lebanon",
+            "target": "Saint Vincent and the Grenadines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lebanon",
+            "target": "Slovakia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lebanon",
+            "target": "Slovenia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lebanon",
+            "target": "United Kingdom",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lesotho",
+            "target": "Namibia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lesotho",
+            "target": "South Africa",
+            "value": "collaboration"
+        },
+        {
+            "source": "Liberia",
+            "target": "Malawi",
+            "value": "collaboration"
+        },
+        {
+            "source": "Liberia",
+            "target": "Pakistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Liberia",
+            "target": "Sierra Leone",
+            "value": "collaboration"
+        },
+        {
+            "source": "Liberia",
+            "target": "Somalia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Libya",
+            "target": "Maldives",
+            "value": "collaboration"
+        },
+        {
+            "source": "Libya",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Libya",
+            "target": "Qatar",
+            "value": "collaboration"
+        },
+        {
+            "source": "Libya",
+            "target": "Singapore",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lithuania",
+            "target": "Mali",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lithuania",
+            "target": "Nauru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lithuania",
+            "target": "Sri Lanka",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lithuania",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lithuania",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Lithuania",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Luxembourg",
+            "target": "New Zealand",
+            "value": "collaboration"
+        },
+        {
+            "source": "Luxembourg",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Luxembourg",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Madagascar",
+            "target": "Pakistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Madagascar",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malawi",
+            "target": "Marshall Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malawi",
+            "target": "Nepal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malawi",
+            "target": "Sierra Leone",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malawi",
+            "target": "Somalia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "Northern Mariana Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "Rwanda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Malaysia",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Maldives",
+            "target": "Paraguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Maldives",
+            "target": "Singapore",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mali",
+            "target": "Sri Lanka",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mali",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mali",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Marshall Islands",
+            "target": "Mozambique",
+            "value": "collaboration"
+        },
+        {
+            "source": "Marshall Islands",
+            "target": "Nepal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Marshall Islands",
+            "target": "Sierra Leone",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritania",
+            "target": "Micronesia (country)",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritania",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritania",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritania",
+            "target": "World",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritius",
+            "target": "Oman",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritius",
+            "target": "Samoa",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritius",
+            "target": "Tokelau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mauritius",
+            "target": "United Kingdom",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mexico",
+            "target": "Montenegro",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mexico",
+            "target": "Poland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mexico",
+            "target": "Seychelles",
+            "value": "collaboration"
+        },
+        {
+            "source": "Micronesia (country)",
+            "target": "Peru",
+            "value": "collaboration"
+        },
+        {
+            "source": "Micronesia (country)",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Micronesia (country)",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Micronesia (country)",
+            "target": "World",
+            "value": "collaboration"
+        },
+        {
+            "source": "Moldova",
+            "target": "Niger",
+            "value": "collaboration"
+        },
+        {
+            "source": "Moldova",
+            "target": "Romania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Moldova",
+            "target": "Sao Tome and Principe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Moldova",
+            "target": "Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Moldova",
+            "target": "Ukraine",
+            "value": "collaboration"
+        },
+        {
+            "source": "Monaco",
+            "target": "Palestine",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mongolia",
+            "target": "Papua New Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mongolia",
+            "target": "Tanzania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Mongolia",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Montenegro",
+            "target": "Seychelles",
+            "value": "collaboration"
+        },
+        {
+            "source": "Morocco",
+            "target": "Romania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Morocco",
+            "target": "Ukraine",
+            "value": "collaboration"
+        },
+        {
+            "source": "Morocco",
+            "target": "Uzbekistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Myanmar",
+            "target": "North Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Myanmar",
+            "target": "Papua New Guinea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Myanmar",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nauru",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nauru",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nauru",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nauru",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nauru",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nepal",
+            "target": "Sierra Leone",
+            "value": "collaboration"
+        },
+        {
+            "source": "Netherlands",
+            "target": "Norway",
+            "value": "collaboration"
+        },
+        {
+            "source": "Netherlands",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "New Zealand",
+            "target": "Saint Lucia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nicaragua",
+            "target": "Panama",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niger",
+            "target": "Sao Tome and Principe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niger",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niger",
+            "target": "Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nigeria",
+            "target": "South Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nigeria",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Nigeria",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niue",
+            "target": "North Macedonia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niue",
+            "target": "Poland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niue",
+            "target": "Serbia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niue",
+            "target": "Syria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niue",
+            "target": "Turkey",
+            "value": "collaboration"
+        },
+        {
+            "source": "Niue",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "North Korea",
+            "target": "Philippines",
+            "value": "collaboration"
+        },
+        {
+            "source": "North Korea",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "North Macedonia",
+            "target": "Serbia",
+            "value": "collaboration"
+        },
+        {
+            "source": "North Macedonia",
+            "target": "Syria",
+            "value": "collaboration"
+        },
+        {
+            "source": "North Macedonia",
+            "target": "Turkey",
+            "value": "collaboration"
+        },
+        {
+            "source": "North Macedonia",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Northern Mariana Islands",
+            "target": "Palau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Northern Mariana Islands",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Northern Mariana Islands",
+            "target": "Rwanda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Northern Mariana Islands",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Northern Mariana Islands",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Northern Mariana Islands",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Norway",
+            "target": "Sweden",
+            "value": "collaboration"
+        },
+        {
+            "source": "Oman",
+            "target": "Saint Vincent and the Grenadines",
+            "value": "collaboration"
+        },
+        {
+            "source": "Oman",
+            "target": "Slovakia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Oman",
+            "target": "Slovenia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Oman",
+            "target": "United Kingdom",
+            "value": "collaboration"
+        },
+        {
+            "source": "Pakistan",
+            "target": "Somalia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Palau",
+            "target": "Russia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Palau",
+            "target": "Rwanda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Palau",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Palau",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Palau",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Palau",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Panama",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Papua New Guinea",
+            "target": "Tanzania",
+            "value": "collaboration"
+        },
+        {
+            "source": "Papua New Guinea",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Paraguay",
+            "target": "Singapore",
+            "value": "collaboration"
+        },
+        {
+            "source": "Peru",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Peru",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Philippines",
+            "target": "Zambia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Portugal",
+            "target": "Suriname",
+            "value": "collaboration"
+        },
+        {
+            "source": "Portugal",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Portugal",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Romania",
+            "target": "Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Romania",
+            "target": "Ukraine",
+            "value": "collaboration"
+        },
+        {
+            "source": "Russia",
+            "target": "Rwanda",
+            "value": "collaboration"
+        },
+        {
+            "source": "Russia",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Russia",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Russia",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Rwanda",
+            "target": "Solomon Islands",
+            "value": "collaboration"
+        },
+        {
+            "source": "Rwanda",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Rwanda",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Saint Kitts and Nevis",
+            "target": "United States",
+            "value": "collaboration"
+        },
+        {
+            "source": "Saint Lucia",
+            "target": "Switzerland",
+            "value": "collaboration"
+        },
+        {
+            "source": "Saint Vincent and the Grenadines",
+            "target": "Slovakia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Saint Vincent and the Grenadines",
+            "target": "Slovenia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Samoa",
+            "target": "Saudi Arabia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Samoa",
+            "target": "Tokelau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Samoa",
+            "target": "United Kingdom",
+            "value": "collaboration"
+        },
+        {
+            "source": "Sao Tome and Principe",
+            "target": "Senegal",
+            "value": "collaboration"
+        },
+        {
+            "source": "Sao Tome and Principe",
+            "target": "Sudan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Saudi Arabia",
+            "target": "Tokelau",
+            "value": "collaboration"
+        },
+        {
+            "source": "Saudi Arabia",
+            "target": "Tonga",
+            "value": "collaboration"
+        },
+        {
+            "source": "Senegal",
+            "target": "Tajikistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "Serbia",
+            "target": "Syria",
+            "value": "collaboration"
+        },
+        {
+            "source": "Serbia",
+            "target": "Turkey",
+            "value": "collaboration"
+        },
+        {
+            "source": "Serbia",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Slovakia",
+            "target": "Slovenia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Slovakia",
+            "target": "United Kingdom",
+            "value": "collaboration"
+        },
+        {
+            "source": "Solomon Islands",
+            "target": "South Korea",
+            "value": "collaboration"
+        },
+        {
+            "source": "Solomon Islands",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "South Korea",
+            "target": "Turkmenistan",
+            "value": "collaboration"
+        },
+        {
+            "source": "South Sudan",
+            "target": "Uganda",
+            "value": "collaboration"
+        },
+        {
+            "source": "South Sudan",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Spain",
+            "target": "Tonga",
+            "value": "collaboration"
+        },
+        {
+            "source": "Spain",
+            "target": "Trinidad and Tobago",
+            "value": "collaboration"
+        },
+        {
+            "source": "Sri Lanka",
+            "target": "Togo",
+            "value": "collaboration"
+        },
+        {
+            "source": "Sri Lanka",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Sri Lanka",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Sudan",
+            "target": "Ukraine",
+            "value": "collaboration"
+        },
+        {
+            "source": "Suriname",
+            "target": "Tunisia",
+            "value": "collaboration"
+        },
+        {
+            "source": "Suriname",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Syria",
+            "target": "Turkey",
+            "value": "collaboration"
+        },
+        {
+            "source": "Syria",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Tanzania",
+            "target": "Zimbabwe",
+            "value": "collaboration"
+        },
+        {
+            "source": "Thailand",
+            "target": "Tuvalu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Togo",
+            "target": "Yemen",
+            "value": "collaboration"
+        },
+        {
+            "source": "Tokelau",
+            "target": "United Kingdom",
+            "value": "collaboration"
+        },
+        {
+            "source": "Tunisia",
+            "target": "Venezuela",
+            "value": "collaboration"
+        },
+        {
+            "source": "Turkey",
+            "target": "Uruguay",
+            "value": "collaboration"
+        },
+        {
+            "source": "Turkmenistan",
+            "target": "Vanuatu",
+            "value": "collaboration"
+        },
+        {
+            "source": "Uganda",
+            "target": "Vietnam",
+            "value": "collaboration"
+        },
+        {
+            "source": "Vanuatu",
+            "target": "Yemen",
+            "value": "collaboration"
+        }
+    ]
+}

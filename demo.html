@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Sunburst Chart for Hierarchical Data</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb {
+      font: 14px sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .breadcrumb a {
+      text-decoration: none;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    svg {
+      width: 80%;
+      height: 80%;
+      border: 1px solid #ddd;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .legend div {
+      width: 100px;
+      height: 20px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .legend-label {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="controls">
+  <label for="countrySelect">Select a Country: </label>
+  <select id="countrySelect"></select>
+</div>
+
+<div class="breadcrumb"></div>
+<svg></svg>
+<div class="legend"></div>
+
+<script>
+  d3.json("tb_data_hierarchical.json").then(data => {
+    const svg = d3.select("svg");
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    let selectedCountry = null;
+    let selectedYear = null;
+
+    // Populate country dropdown
+    const countrySelect = d3.select("#countrySelect");
+    const countries = Object.keys(data);
+
+    countrySelect
+      .selectAll("option")
+      .data(countries)
+      .enter()
+      .append("option")
+      .text(d => d)
+      .attr("value", d => d);
+
+    countrySelect.on("change", function() {
+      selectedCountry = this.value;
+      selectedYear = null; // Reset year when country changes
+      renderSunburst(transformData(data[selectedCountry]));
+    });
+
+    // Render the Sunburst chart
+    function renderSunburst(rootData) {
+      svg.selectAll("*").remove(); // Clear previous visualization
+      document.querySelector(".legend").innerHTML = ''; // Clear previous legend
+
+      const width = svg.node().getBoundingClientRect().width;
+      const height = svg.node().getBoundingClientRect().height;
+      const radius = Math.min(width, height) / 2;
+
+      const partition = d3.partition().size([2 * Math.PI, radius]);
+
+      const root = d3.hierarchy(rootData)
+        .sum(d => d.value)
+        .sort((a, b) => b.value - a.value);
+
+      partition(root);
+
+      const arc = d3.arc()
+        .startAngle(d => d.x0)
+        .endAngle(d => d.x1)
+        .padAngle(0.01)
+        .padRadius(radius / 3)
+        .innerRadius(d => d.y0)
+        .outerRadius(d => d.y1);
+
+      const group = svg.append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+      const path = group.selectAll("path")
+        .data(root.descendants())
+        .enter().append("path")
+        .attr("d", arc)
+        .style("fill", d => color(d.depth))
+        .style("cursor", "pointer")
+        .on("click", (event, d) => zoom(d))
+        .on("mouseover", (event, d) => highlightSegment(d, true))
+        .on("mouseout", (event, d) => highlightSegment(d, false))
+        .append("title")
+        .text(d => `${d.data.name}\n${d.value}`);
+
+      const text = group.selectAll("text")
+        .data(root.descendants())
+        .enter().append("text")
+        .attr("transform", d => `rotate(${(d.x0 + d.x1) / 2 * 180 / Math.PI - 90})`)
+        .attr("dx", d => (d.x1 - d.x0) / 2 * Math.PI < 0.3 ? 20 : -20)
+        .attr("dy", "0.35em")
+        .style("text-anchor", d => (d.x1 - d.x0) / 2 * Math.PI < 0.3 ? "middle" : (d.x0 > Math.PI ? "end" : "start"))
+        .style("font-size", "12px")
+        .style("fill", "#fff")
+        .text(d => d.data.name);
+
+      // Zoom functionality
+      function zoom(d) {
+        const group0 = svg.selectAll("g");
+        const group1 = svg.append("g")
+          .attr("transform", `translate(${width / 2},${height / 2})`);
+
+        partition(d);
+        root.descendants().forEach(d => d.y0 = 0);
+
+        group0.transition().duration(750).style("opacity", 0).remove();
+        group1.transition().duration(750).style("opacity", 1).selectAll("path")
+          .data(d.descendants())
+          .enter().append("path")
+          .attr("d", arc)
+          .style("fill", d => color(d.depth))
+          .style("cursor", "pointer")
+          .on("click", (event, d) => zoom(d))
+          .append("title")
+          .text(d => `${d.data.name}\n${d.value}`);
+
+        group1.selectAll("text")
+          .data(d.descendants())
+          .enter().append("text")
+          .attr("transform", d => `rotate(${(d.x0 + d.x1) / 2 * 180 / Math.PI - 90})`)
+          .attr("dx", d => (d.x1 - d.x0) / 2 * Math.PI < 0.3 ? 20 : -20)
+          .attr("dy", "0.35em")
+          .style("text-anchor", d => (d.x1 - d.x0) / 2 * Math.PI < 0.3 ? "middle" : (d.x0 > Math.PI ? "end" : "start"))
+          .style("font-size", "12px")
+          .style("fill", "#fff")
+          .text(d => d.data.name);
+
+        updateBreadcrumb(d);
+      }
+
+      function updateBreadcrumb(d) {
+        const breadcrumb = d3.select(".breadcrumb").html("");
+        const ancestors = d.ancestors().reverse();
+        ancestors.forEach((node, index) => {
+          const breadcrumbItem = breadcrumb.append("span").text(node.data.name);
+          if (index < ancestors.length - 1) breadcrumbItem.append("span").text(" > ");
+        });
+      }
+
+      // Highlight segment on hover
+      function highlightSegment(d, highlight) {
+        d3.select(this).style("opacity", highlight ? 0.7 : 1);
+        d3.select(this).style("stroke", highlight ? "#fff" : "none")
+          .style("stroke-width", highlight ? "2px" : "0");
+      }
+
+      // Add a legend
+      const legendData = color.domain();
+      const legend = d3.select(".legend");
+
+      legendData.forEach((colorValue, index) => {
+        const legendItem = legend.append("div")
+          .style("background-color", color(colorValue))
+          .attr("class", "legend-item");
+
+        legendItem.append("span").text(`Level ${index}`).attr("class", "legend-label");
+      });
+    }
+
+    function transformData(countryData) {
+      // If a year is selected, show its age group breakdown
+      if (selectedYear) {
+        const yearData = countryData[selectedYear];
+        return {
+          name: selectedYear,
+          children: [
+            {
+              name: "Incidence",
+              children: Object.keys(yearData.incidence).map(ageGroup => ({
+                name: ageGroup,
+                value: yearData.incidence[ageGroup]
+              }))
+            },
+            {
+              name: "Deaths",
+              children: Object.keys(yearData.deaths).map(ageGroup => ({
+                name: ageGroup,
+                value: yearData.deaths[ageGroup]
+              }))
+            }
+          ]
+        };
+      }
+
+      // Otherwise, show the year breakdown for each year in the country
+      return {
+        name: "Root",
+        children: Object.keys(countryData).map(year => ({
+          name: year,
+          children: [
+            {
+              name: "Incidence",
+              children: Object.keys(countryData[year].incidence).map(ageGroup => ({
+                name: ageGroup,
+                value: countryData[year].incidence[ageGroup]
+              }))
+            },
+            {
+              name: "Deaths",
+              children: Object.keys(countryData[year].deaths).map(ageGroup => ({
+                name: ageGroup,
+                value: countryData[year].deaths[ageGroup]
+              }))
+            }
+          ]
+        }))
+      };
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Timeline Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        /* Existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        svg {
+            width: 80vw;
+            height: 70vh;
+            cursor: pointer;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 5px;
+            pointer-events: none;
+            opacity: 0;
+            font-size: 12px;
+        }
+        .axis-label {
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            fill: #333;
+        }
+        .axis-label:hover {
+            fill: #555;
+        }
+        /* Additional styles for the legend */
+        .legend {
+            display: flex;
+            margin-top: 20px;
+        }
+        .legend-item {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button id="prev-year">Previous</button>
+        <button id="play-pause">Play</button>
+        <button id="next-year">Next</button>
+        <label for="year-range">Year: <span id="year-display">2000</span></label>
+        <input type="range" id="year-range" min="2000" max="2019" step="1" value="2000">
+        <label for="age-filter">Age Group: </label>
+        <select id="age-filter">
+            <option value="all">All Age Groups</option>
+            <option value="15-49">15-49 years</option>
+            <option value="50-69">50-69 years</option>
+            <option value="70+">70+ years</option>
+        </select>
+        <button id="export-button">Export</button>
+    </div>
+    <div class="tooltip"></div>
+    <div class="legend" id="legend"></div>
+
+    <script>
+        const margin = { top: 50, right: 40, bottom: 70, left: 60 };
+        const width = window.innerWidth * 0.8 - margin.left - margin.right;
+        const height = window.innerHeight * 0.7 - margin.top - margin.bottom;
+
+        const svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const tooltip = d3.select(".tooltip");
+
+        const x = d3.scaleLog().domain([1, 1000]).range([0, width]);
+        const y = d3.scaleLinear().domain([0, 12000]).range([height, 0]);
+        const radius = d3.scaleSqrt().domain([0, 5000]).range([0, 20]);
+        const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+        const xAxis = d3.axisBottom(x).ticks(10, ",.1s");
+        const yAxis = d3.axisLeft(y);
+
+        svg.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(xAxis)
+            .append("text")
+            .attr("class", "axis-label")
+            .attr("x", width)
+            .attr("y", 40)
+            .attr("text-anchor", "end")
+            .text("Estimated TB Incidence (per 100,000)");
+
+        svg.append("g")
+            .call(yAxis)
+            .append("text")
+            .attr("class", "axis-label")
+            .attr("x", -margin.left)
+            .attr("y", -10)
+            .attr("text-anchor", "start")
+            .text("TB Deaths (All Ages)");
+
+        let currentYear = 2000;
+        let playing = false;
+        let timer;
+
+        d3.csv("cleaned_tb_data_with_lat_lon.csv").then(data => {
+            data.forEach(d => {
+                d.Year = +d.Year;
+                d.Incidence = +d["Estimated incidence of all forms of tuberculosis"];
+                d.Deaths_70plus = +d["Deaths - Tuberculosis - Sex: Both - Age: 70+ years (Number)"];
+                d.Deaths_50_69 = +d["Deaths - Tuberculosis - Sex: Both - Age: 50-69 years (Number)"];
+                d.Deaths_15_49 = +d["Deaths - Tuberculosis - Sex: Both - Age: 15-49 years (Number)"];
+                d.Deaths_5_14 = +d["Deaths - Tuberculosis - Sex: Both - Age: 5-14 years (Number)"];
+                d.Deaths_Under5 = +d["Deaths - Tuberculosis - Sex: Both - Age: Under 5 (Number)"];
+            });
+
+            const years = Array.from(new Set(data.map(d => d.Year)));
+
+            const circles = svg.selectAll("circle")
+                .data(data.filter(d => d.Year === currentYear))
+                .enter().append("circle")
+                .attr("cx", d => x(d.Incidence))
+                .attr("cy", d => y(d.Deaths_15_49))
+                .attr("r", d => radius(d.Deaths_15_49))
+                .attr("fill", d => color(d.Code))
+                .attr("stroke", "black")
+                .on("mouseover", function(event, d) {
+                    tooltip.style("opacity", 1)
+                        .html(`<strong>${d.Entity}</strong><br>Year: ${d.Year}<br>Incidence: ${d.Incidence}<br>Deaths: ${d.Deaths_15_49}`)
+                        .style("left", `${event.pageX + 10}px`)
+                        .style("top", `${event.pageY - 28}px`);
+                })
+                .on("mouseout", () => tooltip.style("opacity", 0));
+
+            function update(year) {
+                d3.select("#year-display").text(year);
+                d3.select("#year-range").property("value", year);
+
+                const ageFilter = d3.select("#age-filter").property("value");
+                let ageColumns = {
+                    "15-49": "Deaths_15_49",
+                    "50-69": "Deaths_50_69",
+                    "70+": "Deaths_70plus"
+                };
+
+                let filteredData;
+                if (ageFilter === "all") {
+                    filteredData = data.filter(d => d.Year === year);
+                    filteredData.forEach(d => {
+                        d.TotalDeaths = d.Deaths_15_49 + d.Deaths_50_69 + d.Deaths_70plus;
+                    });
+                } else {
+                    filteredData = data.filter(d => d.Year === year);
+                }
+
+                circles.data(filteredData)
+                    .join("circle")
+                    .transition().duration(1000)
+                    .attr("cx", d => x(d.Incidence))
+                    .attr("cy", d => y(ageFilter === "all" ? d.TotalDeaths : d[ageColumns[ageFilter]]))
+                    .attr("r", d => radius(ageFilter === "all" ? d.TotalDeaths : d[ageColumns[ageFilter]]))
+                    .attr("fill", d => color(d.Code));
+            }
+
+            function play() {
+                if (!playing) {
+                    playing = true;
+                    d3.select("#play-pause").text("Pause");
+                    timer = setInterval(() => {
+                        currentYear = (currentYear >= d3.max(years)) ? d3.min(years) : currentYear + 1;
+                        update(currentYear);
+                    }, 1500);
+                } else {
+                    playing = false;
+                    d3.select("#play-pause").text("Play");
+                    clearInterval(timer);
+                }
+            }
+
+            d3.select("#play-pause").on("click", play);
+            d3.select("#prev-year").on("click", () => {
+                currentYear = (currentYear <= d3.min(years)) ? d3.max(years) : currentYear - 1;
+                update(currentYear);
+            });
+            d3.select("#next-year").on("click", () => {
+                currentYear = (currentYear >= d3.max(years)) ? d3.min(years) : currentYear + 1;
+                update(currentYear);
+            });
+            d3.select("#year-range").on("input", function() {
+                currentYear = +this.value;
+                update(currentYear);
+            });
+
+            d3.select("#age-filter").on("change", () => update(currentYear));  // Trigger update when age group changes
+
+            update(currentYear); // Initial rendering
+
+            // Interactive Legend Implementation
+            const legendData = Array.from(new Set(data.map(d => d.Code)));
+            const legend = d3.select("#legend")
+                .selectAll(".legend-item")
+                .data(legendData)
+                .enter().append("div")
+                .attr("class", "legend-item")
+                .style("display", "inline-block")
+                .style("padding", "5px")
+                .style("cursor", "pointer")
+                .style("background-color", d => color(d))
+                .on("click", function(event, d) {
+                    // Toggle visibility of circles based on legend item clicked
+                    const isVisible = d3.select(this).classed("active");
+                    d3.select(this).classed("active", !isVisible);
+                    circles.filter(circle => circle.Code === d).style("opacity", isVisible ? 0 : 1);
+                })
+                .text(d => `Entity ${d}`); // Display entity code
+
+            // Export as SVG functionality
+            document.getElementById('export-button').addEventListener('click', () => {
+                const svgString = new XMLSerializer().serializeToString(svg.node());
+                const svgBlob = new Blob([svgString], { type: "image/svg+xml" });
+                const svgUrl = URL.createObjectURL(svgBlob);
+                const link = document.createElement("a");
+                link.href = svgUrl;
+                link.download = `timeline_visualization_${currentYear}.svg`;
+                link.click();
+            });
+        });
+    </script>
+</body>
+</html>

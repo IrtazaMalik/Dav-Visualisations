@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hierarchical Tree Map with Country and Year Selection</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .controls {
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb {
+      font: 14px sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .breadcrumb a {
+      text-decoration: none;
+      color: #007bff;
+      cursor: pointer;
+    }
+
+    svg {
+      width: 80%;
+      height: 80%;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+<div class="controls">
+  <label for="countrySelect">Select a Country: </label>
+  <select id="countrySelect"></select>
+</div>
+
+<div class="breadcrumb"></div>
+<svg></svg>
+
+<script>
+  d3.json("tb_data_hierarchical.json").then(data => {
+    const svg = d3.select("svg");
+    const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+    let selectedCountry = null;
+    let selectedYear = null;
+
+    // Populate country dropdown
+    const countrySelect = d3.select("#countrySelect");
+    const countries = Object.keys(data);
+
+    countrySelect
+      .selectAll("option")
+      .data(countries)
+      .enter()
+      .append("option")
+      .text(d => d)
+      .attr("value", d => d);
+
+    countrySelect.on("change", function() {
+      selectedCountry = this.value;
+      selectedYear = null; // Reset year selection when changing country
+      renderTreeMap(transformData(data[selectedCountry]));
+    });
+
+    function renderTreeMap(rootData) {
+      svg.selectAll("*").remove(); // Clear previous visualization
+
+      const width = svg.node().getBoundingClientRect().width;
+      const height = svg.node().getBoundingClientRect().height;
+
+      const root = d3.hierarchy(rootData).sum(d => d.value);
+      const treemap = d3.treemap().size([width, height]).padding(2);
+      treemap(root);
+
+      // Update breadcrumb navigation
+      updateBreadcrumb(root);
+
+      const nodes = svg.selectAll("g")
+        .data(root.children)
+        .join("g")
+        .attr("transform", d => `translate(${d.x0},${d.y0})`);
+
+      nodes.append("rect")
+        .attr("fill", d => color(d.depth))
+        .attr("width", d => d.x1 - d.x0)
+        .attr("height", d => d.y1 - d.y0)
+        .attr("stroke", "#fff")
+        .on("click", (event, d) => {
+          if (d.children) {
+            if (d.depth === 1) { // Year layer clicked
+              selectedYear = d.data.name;
+              renderTreeMap(transformData(data[selectedCountry])); // Redraw tree with age groups
+            } else {
+              zoom(d); // Zoom into age group if clicked
+            }
+          }
+        });
+
+      // Add value and percentage text inside the nodes
+      nodes.append("text")
+        .attr("x", d => (d.x1 - d.x0) / 2) // Horizontal center
+        .attr("y", d => (d.y1 - d.y0) / 2) // Vertical center
+        .style("font-size", "12px")
+        .style("fill", "black")
+        .style("text-anchor", "middle") // Horizontally center the text
+        .style("dominant-baseline", "middle") // Vertically center the text
+        .text(d => {
+          if (d.data.value !== undefined) {
+            // If it has a value (like Incidence), display it with percentage
+            const percentage = (d.data.value / d.parent.value) * 100;
+            if (!isNaN(percentage) && percentage !== Infinity && percentage !== -Infinity) {
+              return `${d.data.value.toFixed(0)} (${percentage.toFixed(1)}%)`;
+            } else {
+              return `${d.data.value.toFixed(0)}`; // Display just the value if percentage is invalid
+            }
+          } else if (d.data.children) {
+            // If it's a Deaths node with age group breakdown
+            const totalDeaths = d.data.children.reduce((acc, child) => acc + child.value, 0);
+            const percentage = (totalDeaths / d.parent.value) * 100;
+            if (!isNaN(percentage) && percentage !== Infinity && percentage !== -Infinity) {
+              return `${d.data.name}: ${totalDeaths.toFixed(0)} (${percentage.toFixed(1)}%)`;
+            } else {
+              return `${d.data.name}: ${totalDeaths.toFixed(0)}`; // Display just the value if percentage is invalid
+            }
+          }
+          return "";
+        });
+    }
+
+    function zoom(d) {
+      const width = svg.node().getBoundingClientRect().width;
+      const height = svg.node().getBoundingClientRect().height;
+
+      const treemap = d3.treemap().size([width, height]).padding(2);
+      treemap(d);
+      renderTreeMap(d);
+    }
+
+    function updateBreadcrumb(d) {
+      const breadcrumbDiv = d3.select(".breadcrumb");
+      const ancestors = d.ancestors().reverse();
+
+      breadcrumbDiv.selectAll("span").remove();
+
+      ancestors.forEach((node, index) => {
+        breadcrumbDiv.append("span").html((index ? " &gt; " : "") + `<a>${node.data.name}</a>`)
+          .on("click", () => zoom(node));
+      });
+    }
+
+    function transformData(countryData) {
+      // If a year is selected, show its age group breakdown
+      if (selectedYear) {
+        const yearData = countryData[selectedYear];
+        return {
+          name: selectedYear,
+          children: [
+            { name: "Incidence", value: yearData.incidence },
+            {
+              name: "Deaths",
+              children: Object.keys(yearData.deaths).map(ageGroup => ({
+                name: ageGroup,
+                value: yearData.deaths[ageGroup]
+              }))
+            }
+          ]
+        };
+      }
+
+      // Otherwise, show the year breakdown for each year in the country
+      return {
+        name: "Root",
+        children: Object.keys(countryData).map(year => ({
+          name: year,
+          children: [
+            { name: "Incidence", value: countryData[year].incidence },
+            {
+              name: "Deaths",
+              children: Object.keys(countryData[year].deaths).map(ageGroup => ({
+                name: ageGroup,
+                value: countryData[year].deaths[ageGroup]
+              }))
+            }
+          ]
+        }))
+      };
+    }
+  });
+</script>
+
+</body>
+</html>
